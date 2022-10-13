@@ -1,0 +1,308 @@
+.container {
+  position: fixed;
+  width: 1000px;
+  height: 600px;
+  background-color: aliceblue;
+  border: 2px solid #000000;
+  border-radius: 10px;
+
+  .backBtn,
+  .nextBtn {
+    position: absolute;
+    top: 250px;
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    .backBtnFlag,
+    .nextBtnFlag {
+      width: 30px;
+      height: 16px;
+      border: 1px solid #000000;
+      border-radius: 4px;
+    }
+    .backBtnImg,
+    .nextBtnImg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .backBtn:hover,
+  .nextBtn:hover {
+    transform: scale(110%);
+  }
+  .backBtn {
+    left: -120px;
+  }
+  .nextBtn {
+    right: -120px;
+  }
+  .closeButton {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  .closeButton:hover {
+    transform: scale(120%);
+  }
+  .headerInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    height: 240px;
+    .flagBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h6 {
+        margin-bottom: 10px;
+      }
+      .flagImg {
+        width: 200px;
+        border-radius: 8px;
+        border: 1px solid #000000;
+        border-radius: 10px;
+      }
+    }
+    .mainInfo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 300px;
+      height: 240px;
+      .countryName {
+        p {
+          text-align: center;
+        }
+      }
+      .capitalAndPopulation {
+        .capital {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          p {
+            margin-left: 10px;
+          }
+        }
+        .capital:first-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .coatOfArms {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h6 {
+        margin-bottom: 10px;
+      }
+      .flagImg {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+  .bottomInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 320px;
+    .bordersBlock {
+      display: flex;
+      align-items: center;
+      overflow: scroll;
+      .borderCountry {
+        margin: 0 5px;
+      }
+      .borderIcon {
+        margin-right: 6px;
+      }
+    }
+    .arrayBlock {
+      display: flex;
+      align-items: center;
+
+      .arrayBlockIcon {
+        margin-right: 6px;
+      }
+      .arrayBlockItem {
+        margin: 0 5px;
+      }
+    }
+    .aloneItem {
+      display: flex;
+      align-items: center;
+      b {
+        margin-right: 5px;
+      }
+      .aloneItemIcon {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 800px;
+    .backBtn {
+      left: -80px;
+    }
+    .nextBtn {
+      right: -80px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    width: 600px;
+    .backBtn {
+      left: -80px;
+    }
+    .nextBtn {
+      right: -80px;
+    }
+    .headerInfo {
+      .flagBlock {
+        .flagImg {
+          width: 100px;
+        }
+      }
+      .mainInfo {
+        width: 230px;
+        height: 180px;
+        .capitalAndPopulation {
+          .capital {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .coatOfArms {
+        .flagImg {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 500px;
+    .backBtn,
+    .nextBtn {
+      width: 60px;
+      height: 60px;
+      top: 270px;
+    }
+    .backBtn {
+      left: -30px;
+    }
+    .nextBtn {
+      right: -30px;
+    }
+  }
+
+  .bottomInfo {
+    p,
+    i,
+    b {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    width: 300px;
+    .backBtn,
+    .nextBtn {
+      width: 40px;
+      height: 40px;
+      top: 200px;
+      .backBtnFlag,
+      .nextBtnFlag {
+        width: 14px;
+        height: 10px;
+        border-radius: 2px;
+      }
+      .backBtnImg,
+      .nextBtnImg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    .backBtn {
+      left: -10px;
+    }
+    .nextBtn {
+      right: -10px;
+    }
+    .closeButton {
+      width: 20px;
+      height: 20px;
+      right: 0;
+      top: 0;
+    }
+    .headerInfo {
+      margin: 0;
+      .flagBlock {
+        .flagImg {
+          width: 60px;
+        }
+      }
+      .mainInfo {
+        width: 100px;
+        height: 150px;
+        .countryName {
+          font-size: 10px;
+          text-align: center;
+        }
+        .capitalAndPopulation {
+          .capital {
+            p {
+              font-size: 10px;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .coatOfArms {
+        .flagImg {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+    .bottomInfo {
+      p,
+      i,
+      b {
+        font-size: 10px;
+        text-align: center;
+      }
+    }
+  }
+}
